@@ -42,6 +42,13 @@ function colorchanger(){
     //console.log(left,right,bottom.top,"-->")
     
 }
-
+gindex=1;
+function changeImage(){
+    document.images[0].src="wpp"+gindex+".jpg";
+    gindex++;
+    if(gindex==7)
+      gindex=1;
+}
 //colorchanger();
-setInterval(colorchanger,100);
+setInterval(colorchanger,140);
+setInterval(changeImage,2000);
