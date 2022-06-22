@@ -13,3 +13,35 @@ function apply(){
    document.getElementsByTagName("li")[c].style.color=lc;
    document.getElementsByTagName("li")[c].style.fontFamily=lf;
 }
+
+wleft="5px dashed green";
+wtop="5px dashed blue";
+wright="5px dashed darkred";
+wbottom="5px dashed yellow";
+
+function colorchanger(){
+ // console.log(top,left,right,bottom);
+   let xtop=wleft;
+   let xright=wtop;
+   let  xbottom=wright;
+   let  xleft=wbottom;
+
+    let list =document.getElementById("box");
+    list.style.borderLeft=xleft;
+    list.style.borderRight=xright;
+    list.style.borderTop=xtop;
+    list.style.borderBottom=xbottom;
+    //console.log(xleft,xright,xbottom,xtop)
+  //  console.log(left,right,bottom,top);
+
+    wleft=xleft;
+    wright=xright;
+    wbottom=xbottom;
+    wtop=xtop;
+
+    //console.log(left,right,bottom.top,"-->")
+    
+}
+
+//colorchanger();
+setInterval(colorchanger,100);
